@@ -8,7 +8,6 @@ def cls():
 def generate_card():
     return deck[random.randint(0, 11)]
 
-
 def dealing_cards(hand):
 
     for i in range(0, 2):
@@ -42,7 +41,6 @@ def showdown():
     else:
         return f"Draw! Your Cards: {player_hand} Score: {sum(player_hand)}\nComputer Cards: {computer_hand} Score: {sum(computer_hand)}"
 
-
 def hands_check(player, computer):
     if player == 21 and computer != 21:
         return False
@@ -58,7 +56,6 @@ def hands_check(player, computer):
 
 deck = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
               
-
 while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower() == 'y':
     cls()
     player_hand = []
@@ -67,9 +64,7 @@ while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower(
 
     print(logo)
 
-
     playing = None
-
 
     player_hand = dealing_cards(player_hand)
     computer_hand = dealing_cards(computer_hand)
@@ -95,7 +90,6 @@ while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower(
             player_turn = False
             computer_turn = True
         
-
     while computer_turn and playing:
 
         if sum(computer_hand) < 11: design = 1
@@ -113,6 +107,3 @@ while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower(
 
     if playing:
         print(showdown())
-
-
-
