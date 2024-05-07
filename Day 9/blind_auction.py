@@ -1,8 +1,9 @@
 import os
 from bind_auction_art import logo
 
+
 def cls():
-    os.system('cls' if os.name=='nt' else 'clear')
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 
 is_active = True
@@ -10,8 +11,6 @@ is_active = True
 print(logo)
 
 auction_dictionary = {}
-
-
 
 while is_active:
 
@@ -24,17 +23,13 @@ while is_active:
         is_active = False
     cls()
 
-    
-    
 winner = ""
 
 temp = 0
 
 for key in auction_dictionary:
-    if auction_dictionary[key] > temp: 
+    if auction_dictionary[key] > temp:
         temp = auction_dictionary[key]
         winner = key
-
-
 
 print(winner, auction_dictionary[winner])
