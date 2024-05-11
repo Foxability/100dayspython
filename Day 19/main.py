@@ -1,15 +1,23 @@
 import turtle as turtelerino
 
-redcliff = turtelerino.Turtle()
 
 screen = turtelerino.Screen()
+screen.setup(width=500, height=400)
+
+rainbow_turtles = ['red', 'orange', 'yellow', 'green', 'blue',]
+turtle_names = ['redcliff', 'tommy', 'timmy', 'johnny', 'benny']
 
 
-def move_forward():
-    redcliff.forward(100)
+redcliff = turtelerino.Turtle(shape='turtle')
+tommy = turtelerino.Turtle(shape='turtle')
+timmy = turtelerino.Turtle(shape='turtle')
+johnny = turtelerino.Turtle(shape='turtle')
+benny = turtelerino.Turtle(shape='turtle')
 
-screen.listen()
-screen.onkey(key='w', fun=move_forward)
 
+
+
+redcliff.penup()
+redcliff.goto(-230, -125)
 
 screen.exitonclick()
